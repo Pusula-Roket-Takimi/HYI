@@ -86,6 +86,9 @@ const AVIYONIK_PAKET_SIZE = 4 * 12 + 1 + 1 + 2; // 12 float + 1 int32 + 1 checks
 
 // Static dosyaları servis e (route'lardan sonra)
 app.use(express.static(path.join(__dirname, 'public')));
+app.get('/', (req, res) =>
+  res.sendFile(path.join(__dirname, 'index.html'))
+);
 
 // Dosyaya yazılan verileri çekmek için endpoint'ler
 app.get('/api/gorev-verileri', (req, res) => {
