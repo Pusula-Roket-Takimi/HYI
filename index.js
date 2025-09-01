@@ -8,7 +8,7 @@ const fs = require('fs');
 const app = express();
 const server = http.createServer(app);
 const wss = new WebSocket.Server({ server });
-const TAKIM_ID = 46;
+const TAKIM_ID = 22;
 const PORT = 3000;
 
 // Port yönetimi
